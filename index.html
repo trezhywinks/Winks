@@ -31,7 +31,19 @@
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
   }
-  
+  .top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    height: 7vh;
+    z-index: 10;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    border-bottom: 1px solid #3193E429;
+  }
    
   .as{
    display: flex;
@@ -40,16 +52,122 @@
   .cl{
     background: linear-gradient(#000000D1, #000000B3, #42445A00);
   }
+  
+  .lines {
+  width: 50px;
+  margin-top: 10px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+  .line{
+  background: #6D6D6D;
+  width: 100%;
+  margin-top: 7px;
+  height: 4px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+
+.lines.ativo .line1 {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.lines.ativo .line2 {
+  opacity: 0;
+  display: none;
+}
+
+.lines.ativo .line3 {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.ver{
+ background: #000;
+ overflow: hidden;
+ overflow-y: auto;
+ height: 100vh;
+ position: fixed;
+ top: -850px;
+ z-index: 9;
+ left: 0;
+ right: 0;
+ transition: 0.5s;
+}
+
+.ver.ativo{
+  top: 0;
+}
 </style>
 <body>
+  <div class="top">
+    <div class="lines" id="menu">
+  <div class="line line1"></div>
+  <div class="line line2"></div>
+  <div class="line line3"></div>
+</div>
+
+   <div class="qik">
+           <div class="io" style=" text-align: center;">
+        <img src="https://count.getloli.com/@Trezhywinks?name=Trezhywinks&theme=booru-lisu&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto" width="150" /><br>
+      </div>
+   </div> 
+  </div>
+  <div class="ver">
+    <br>
+    <br><br>
+    <br>
+
+<div class="perfil" id="perfil">
+  <h2>Carregando perfil...</h2>
+</div>
+
+<script>
+  const username = "trezhywinks"; 
+  const apiUrl = `https://api.github.com/users/${username}`;
+  
+  fetch(apiUrl)
+    .then(res => res.json())
+    .then(user => {
+      const container = document.getElementById("perfil");
+      container.innerHTML = `
+        <h2>${user.name ?? user.login}</h2>
+        <p><strong>Bio:</strong> ${user.bio ?? "Sem bio"}</p>
+        <p><strong>Repositórios:</strong> ${user.public_repos}</p>
+        <p><strong>Seguidores:</strong> 666.17...</p>
+        <p><strong>Seguindo:</strong> ${user.following}</p>
+        <p><strong>Localização:</strong> ${user.location ?? "Não informado"}</p>
+        <p><strong>Site:</strong> ${user.blog ? `<a href="${user.blog}" style="color:#3193e4;" target="_blank">${user.blog}</a>` : "Não informado"}</p>
+      `;
+    })
+    .catch(err => {
+      document.getElementById("perfil").innerHTML = `<p>Erro ao carregar perfil.</p>`;
+      console.error(err);
+    });
+</script>
+   </div>
+  <script>
+  const btn = document.querySelector(".lines");
+  const ver = document.querySelector(".ver");
+  const lines = document.querySelector(".lines");
+  
+           btn.addEventListener("click", () => {
+             ver.classList.toggle("ativo");
+             lines.classList.toggle("ativo");
+            // if (perf.classList.contains("ativo")) {          }
+           })
+  </script>
 <div class="re">
              <div class="cl">
                <br>
+               <br><br>
+  <br>
        <ion-icon style="font-size: 15px; color: #6D6D6D;" name="logo-github"></ion-icon>
       <ion-icon style="font-size: 15px; color: #6D6D6D;" name="logo-reddit"></ion-icon>
-
                <br>
-               <br>
+               <br><br>
                <center>
              <div class="o">
                <img src="https://avatars.githubusercontent.com/u/205466886?v=4" width="120" style="border-radius: 100%;" />
@@ -85,9 +203,6 @@
       <p style="font-size: 16px; color: white; opacity: 0.7;">A man's past can be his perdition, when ancient shadows guide his choices.</p>
     </div>
     <div class="flexd">
-      <div class="io" style="width:80px; margin-left: 20px; text-align: center;">
-  <img src="https://count.getloli.com/@Trezhywinks?name=Trezhywinks&theme=booru-lisu&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto" width="150"/><br>
-      </div>
       
           <center>
       <br>
