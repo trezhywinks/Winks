@@ -25,6 +25,7 @@
   *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
   body{
     background: #121212;
@@ -100,6 +101,162 @@
 .ver.ativo{
   top: 0;
 }
+.slider {
+  width: 90%;
+  height: 24vh;
+  border-radius: 20px;
+  margin: 0 auto 10px;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  z-index: 7;
+}
+
+.slides {
+  display: flex;
+  gap: 20px;
+  animation: slide 9s ease-in-out infinite;
+}
+
+.slides img {
+  min-width: 100%;
+  height: 24vh;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@keyframes slide {
+
+  0%,
+  20% {
+    transform: translateX(0);
+  }
+  
+  25%,
+  45% {
+    transform: translateX(calc(-100% - 20px));
+  }
+  
+  50%,
+  70% {
+    transform: translateX(calc(-200% - 40px));
+  }
+  
+  75%,
+  95% {
+    transform: translateX(calc(-300% - 60px));
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.selc{
+  display: flex;
+  width: 100%;
+}
+.linha-two{
+  margin-top: -6px;
+  width: 100%;
+}
+.o{
+  margin-top: -40px;
+  position: relative;
+  z-index: 8;
+}
+
+.flexd{
+  text-align: center;
+  background: #0C0C0CB5;
+  width: 100%;
+  border-radius: 5px;
+}
+.fh{
+  border: 1px solid#DFE0E41F;
+  border-radius: 40px;
+  text-align:  center;
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  width: 80%;
+}
+
+.games{
+  margin: 5px;
+}
+#home{
+  color: #3193e4;
+}
+   .flexd{width: 90%;margin: 0 auto 10px;}
+      .pagcarr {overflow: hidden;width: 80%;margin: 0 auto 10px;}
+p{
+  color: #6D6D6D;
+  font-size: 13px;
+}
+.texty, .textes {
+  font-size: 17px;
+  white-space: nowrap;
+  padding-right: 50px;
+  color: #6D6D6D;
+}
+.linha-two {
+  display: flex;
+  width: 100%;
+  width: max-content;
+  animation: mov 10s linear infinite;
+}
+    @keyframes mov {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    } 
+    
+    .linksd{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+    .clicks{
+      overflow: hidden;
+    }
+    .files{
+      animation: -gale 0.5s ease-in;
+     /* transform: translateX(250px);*/
+      display:none;
+      transition: 0.5s;
+    }
+    
+    @keyframes -gale {
+      from{
+        transform: translateX(450px);
+        transition: 0.5s;
+      }
+      to{
+        transform: translateX(0);
+        transition: 0.5s;
+      }
+    }
+    .gamesd{
+      display: none;
+    }
+    
+    .games{
+      width:80%;
+      border: 1px solid #42445A;
+      padding: 8px;
+     border-radius: 10px
+    }
+    
+    #derf{
+      margin: 10px;
+      letter-spacing: -1px;
+    }
 </style>
 <body>
   <div class="top">
@@ -126,9 +283,9 @@
 
 <script>
   const username = "trezhywinks"; 
-  const apiUrl = `https://api.github.com/users/${username}`;
+  const apiurl = `https://api.github.com/users/${username}`;
   
-  fetch(apiUrl)
+  fetch(apiurl)
     .then(res => res.json())
     .then(user => {
       const container = document.getElementById("perfil");
@@ -160,31 +317,16 @@
            })
   </script>
 <div class="re">
-             <div class="cl">
+               <div class="cl">
                <br>
                <br><br>
   <br>
+  <div class="selc">
+    <div class="iop">
        <ion-icon style="font-size: 15px; color: #6D6D6D;" name="logo-github"></ion-icon>
       <ion-icon style="font-size: 15px; color: #6D6D6D;" name="logo-reddit"></ion-icon>
-               <br>
-               <br><br>
-               <center>
-             <div class="o">
-               <img src="https://avatars.githubusercontent.com/u/205466886?v=4" width="120" style="border-radius: 100%;" />
-             </div>
-             <div class="e">
-               <h2>trezhywinks</h2>
-               <div class="as">
-                <div class="log">
-                </div>
-                <div class="names" style="margin-left: 2px;">
-                 <p>Phäntom</p> 
-                </div>
-               </div>
-             </div>
-           </div>
-  </center>
-         <div class="pagcarr">
+          </div>
+          <div class="pagcarr">
       <div class="linha-two">
         <div class="textes">
         </div>
@@ -199,71 +341,244 @@
         </script>
       </div>
     </div>
+  </div>
+                   <div class="slider">
+      <div class="slides">
+        <!--https://raw.githubusercontent.com/trezhywinks/cripwinks/refs/heads/main/IMG_4352.jpeg-->
+        <img src="https://raw.githubusercontent.com/trezhywinks/cripwinks/refs/heads/main/IMG_4356.jpeg" class="" />
+        <img src="https://raw.githubusercontent.com/trezhywinks/cripwinks/refs/heads/main/IMG_4355.webp" class="" />
+        <img src="https://raw.githubusercontent.com/trezhywinks/cripwinks/refs/heads/main/IMG_4352.jpeg" class="" />
+        <img src="https://raw.githubusercontent.com/trezhywinks/cripwinks/refs/heads/main/IMG_4354.jpeg" class="" />
+      </div>
+    </div>
+               <center>
+             <div class="o">
+               <img src="https://avatars.githubusercontent.com/u/205466886?v=4" width="120" style="border-radius: 100%; border: 5px solid #121212;" />
+             </div>
+             <div class="e">
+               <h2>trezhywinks</h2>
+               <div class="as">
+                <div class="log">
+                </div>
+                <div class="names" style="margin-left: 2px;">
+                 <p>Phäntom</p> 
+                </div>
+               </div>
+             </div>
+           </div>
+  </center>
+    
     <div class="god" style="width:80%; margin: 0 auto 10px;">
-      <p style="font-size: 16px; color: white; opacity: 0.7;">A man's past can be his perdition, when ancient shadows guide his choices.</p>
     </div>
     <div class="flexd">
-      
-          <center>
-      <br>
-      <br>
-      <br>    </center>
-    <br>
+      <div class="fh">
+             <div class="games">
+       <p id="home" class="">Home</p>
+     </div>
+        <div class="games">
+          <p id="game" class="">Games</p>
+        </div>
+        <div class="games">
+        <p id="gale">Galeria</p>
+        </div>
+      </div>
     </div>
     <br>
-    <style>
+</div>
+<div class="clicks">
+  <div class="gamesd">
+    <p>not the games!</p>
+  </div>
+  <div class="homeclick">
+<h2 id="derf">Welcome to web winks</h2>    
+      <p style="font-size: 16px; color: #6D6D6D; margin-left: 10px;">A man's past can be his perdition, when ancient shadows guide his choices.</p>
+  </div>
+  <div class="files">
+  <h2 id="derf">Galeria de Imagens</h2>
+  <p style="font-size: 16px; color: #6D6D6D; margin-left: 10px;">Uma API simples com mais de 100 imagens de garotas aleatórias do <span style=" color: #3193e4;">Pinterest</span>.</p>
+  <div id="galeria"></div>
+  <div id="overlay" class="overlay"></div>
+  <style>
+  #galeria{
+   text-align: center;
+  }
+        .imagem-container {
+      display: inline-block;
+      justify-content: center;
+      text-align: center;
+    }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  display: none;
+}
+
+/*
+.imagem-ativa {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 50vh;
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}*/
+
+
+.btn-fechar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  background: #fff;
+  border: none;
+  font-size: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.dow{
+  position: fixed;
+top: 20px;
+left: 20px;
+width: 70%;
+z-index: 1001;
+background: #3193e4;
+color: #000;
+letter-spacing: -1px;
+font-weight: 800;
+border: none;
+font-size: 20px;
+padding: 8px 12px;
+cursor: pointer;
+border-radius: 5px;
+text-decoration: none;
+}
+    .trezhy-image{
+     cursor: pointer;
+       height:25vh;
+      border-radius: 20px;
+      width: 180px;
+      margin: 10px;
+      transition: all 0.1s ease-out;
+    }
     
-    .io{
-      margin:;
+    .imagem-ativa {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /*transform: translate(-50%, -50%);*/
+  transform: translate(-50%, -50%) scale(1);
+  transition: 0.5s;
+  border-radius: 1px;
+  width: 80%;
+  margin: 0 auto 10px;
+  height: auto;
+  
+  z-index: 1001;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+    #text-image{
+      font-size: 17px;
     }
-    .flexd{
-      width: 90%;
-      margin: 0 auto 10px;
-    }
-      .pagcarr {
-        overflow: hidden;
-        width: 80%;
-margin: 0 auto 10px;
-
-}
-
-p{
-  color: #6D6D6D;
-  font-size: 13px;
-}
-
-.texty, .textes {
-  font-size: 17px;
-  white-space: nowrap;
-  padding-right: 50px;
-  color: #6D6D6D;
-}
-
-
-.linha-two {
-  display: flex;
-  width: 100%;
-  width: max-content;
-  animation: mov 10s linear infinite;
-}
-
-    @keyframes mov {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    } 
+  </style>
+  <script>
+    fetch("https://raw.githubusercontent.com/trezhywinks/api-jpeg/refs/heads/main/data.json")
+  .then(res => res.json())
+  .then(dados => {
+    const galeria = document.getElementById("galeria");
+    const overlay = document.getElementById("overlay");
     
-    .linksd{
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding: 10px;
-    }
-    </style> 
-</div>  
+    dados.trezhywinks.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "imagem-container";
+      
+      const img = document.createElement("img");
+      img.src = item.url;
+      img.alt = item.text;
+      img.className = "trezhy-image";
+      
+      const p = document.createElement("p");
+      p.textContent = item.text;
+      p.id = "text-image";
+      
+      img.addEventListener("click", () => {
+  document
+    .querySelectorAll(".imagem-ativa")
+    .forEach(el => el.classList.remove("imagem-ativa"));
+  
+  img.classList.add("imagem-ativa");
+  overlay.style.display = "block";
+  
+  const btn = document.createElement("button");
+  const dow = document.createElement("a");
+  btn.textContent = "✖";
+  btn.className = "btn-fechar";
+ dow.textContent = "Salvar";
+dow.className = "dow";
+dow.href = item.url;
+dow.download = "trezhywinks.webp";
+  btn.addEventListener("click", () => {
+    img.classList.remove("imagem-ativa");
+    overlay.style.display = "none";
+    btn.remove();
+    dow.remove();
+  });
+  
+  document.body.appendChild(btn);
+  document.body.appendChild(dow);
+});
+     
+      div.appendChild(img);
+      div.appendChild(p);
+      galeria.appendChild(div);
+    });
+  })
+  .catch(err => console.error("Erro ao carregar imagens:", err));
+  </script>
+  </div>
+</div>
+<script>
+  const gale = document.getElementById("gale");
+  const ho = document.getElementById("home");
+  const game = document.getElementById("game");
+  const files = document.querySelector(".files");
+  const games = document.querySelector(".gamesd");
+  const hclick = document.querySelector(".homeclick");
+  
+  gale.addEventListener("click", () =>{
+    gale.style.color = "#3193e4";
+    ho.style.color = "#6D6D6D";
+    game.style.color = "#6D6D6D";
+    files.style.display = "inline";
+    hclick.style.display = "none";
+    games.style.display = "none";
+    //files.classList.toggle("ativo");
+  } );
+    ho.addEventListener("click", () => {
+    gale.style.color = "#6D6D6D";
+    ho.style.color = "#3193e4";
+    game.style.color = "#6D6D6D";
+    files.style.display = "none";
+    hclick.style.display = "inline";
+    games.style.display = "none";
+    //files.classList.toggle("ativo");
+  });
+      game.addEventListener("click", () => {
+      gale.style.color = "#6D6D6D";
+      ho.style.color = "#6D6D6D";
+      game.style.color = "#3193e4";
+      files.style.display = "none";
+      hclick.style.display = "none";
+      games.style.display = "inline";
+      //files.classList.toggle("ativo");
+    });
+</script>
 </body>
 
 </html>
