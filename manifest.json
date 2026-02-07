@@ -1,0 +1,20 @@
+{
+  "name": "trezhywinks",
+  "short_name": "trezhywinks",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#25D366",
+  "icons": [
+    {
+      "src": "https://avatars.githubusercontent.com/u/205466886?v=4",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://avatars.githubusercontent.com/u/205466886?v=4",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
