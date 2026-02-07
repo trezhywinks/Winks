@@ -309,6 +309,21 @@ font-size: 14px !important;
       height: 110vh;
       z-index: 6;
     }
+      .git{
+      transition: 0.5s;
+      position: relative;
+      z-index: 10;
+      animation: --git 0.5s ease-out;
+      
+    }
+    @keyframes --git{
+      from{
+        transform: translateY(10px);
+      }
+      to{
+      transform: translateY(0);
+      }
+    }
 </style>
 <body>
   <div class="top">
@@ -403,6 +418,7 @@ font-size: 14px !important;
       </div>
     </div>
                <center>
+       <div class="git">
              <div class="o">
                <img src="https://avatars.githubusercontent.com/u/205466886?v=4" width="120" style="border-radius: 100%; border: 5px solid #121212;" />
              </div>
@@ -416,6 +432,7 @@ font-size: 14px !important;
                 </div>
                </div>
              </div>
+          </div>
   </center>
                </div>
                </div>
@@ -606,6 +623,7 @@ dow.download = "trezhywinks.webp";
   const ho = document.getElementById("home");
   const game = document.getElementById("game");
   const files = document.querySelector(".files");
+  const git = document.querySelector(".git");
   const games = document.querySelector(".gamesd");
   const hclick = document.querySelector(".homeclick");
   const contro = document.querySelector(".contro");
@@ -618,6 +636,7 @@ dow.download = "trezhywinks.webp";
   
   gale.addEventListener("click", () =>{
     gale.style.color = "#fff";
+    git.style.display = "none";
     ho.style.color = "#6D6D6D";
     game.style.color = "#6D6D6D";
     files.style.display = "inline";
@@ -636,6 +655,7 @@ dow.download = "trezhywinks.webp";
   } );
     ho.addEventListener("click", () => {
     gale.style.color = "#6D6D6D";
+    git.style.display = "block";
     ho.style.color = "#fff";
     game.style.color = "#6D6D6D";
     files.style.display = "none";
@@ -655,6 +675,7 @@ dow.download = "trezhywinks.webp";
       game.addEventListener("click", () => {
       gale.style.color = "#6D6D6D";
       ho.style.color = "#6D6D6D";
+      git.style.display = "none";
       game.style.color = "#fff";
       files.style.display = "none";
       hclick.style.display = "none";
@@ -671,7 +692,6 @@ dow.download = "trezhywinks.webp";
 
       //files.classList.toggle("ativo");
     });
- 
 </script>
 <br><br><br>
 <br><br><br><br>
