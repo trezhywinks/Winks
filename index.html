@@ -26,15 +26,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
   }
   body{
-    background: #121212;
     color: #fff;
+    background: #101010;
     font-family: Arial, Helvetica, sans-serif;
   }
-  .top{
-    position: fixed;
-    top: 0;
+  .top{position: fixed;top: 0;
     left: 0;
     right: 0;
     background: #000;
@@ -50,10 +49,6 @@
    display: flex;
    justify-content: center;
   }
-  .cl{
-    background: linear-gradient(#000000D1, #000000B3, #42445A00);
-  }
-  
   .lines {
   width: 50px;
   margin-top: 10px;
@@ -169,34 +164,43 @@
 .flexd{
   text-align: center;
   background: #0C0C0CB5;
-  width: 100%;
   border-radius: 5px;
 }
 .fh{
-  border: 1px solid#DFE0E41F;
   border-radius: 40px;
   text-align:  center;
   margin: 0 auto 10px;
   display: flex;
   justify-content: space-around;
   padding: 10px;
-  width: 80%;
+  width: 100%;
 }
 
 .games{
   margin: 5px;
 }
 #home{
-  color: #3193e4;
+  color: #fff;
 }
-   .flexd{width: 90%;margin: 0 auto 10px;}
+   .flexd{width: 100%;margin: 0 auto 10px;}
       .pagcarr {overflow: hidden;width: 80%;margin: 0 auto 10px;}
 p{
   color: #6D6D6D;
   font-size: 13px;
 }
+i{
+font-size: 14px !important;
+}
+
+.texty,
+.textes,
+.texty i,
+.textes i {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 .texty, .textes {
-  font-size: 17px;
   white-space: nowrap;
   padding-right: 50px;
   color: #6D6D6D;
@@ -248,7 +252,6 @@ p{
     
     .games{
       width:80%;
-      border: 1px solid #42445A;
       padding: 8px;
      border-radius: 10px
     }
@@ -256,6 +259,12 @@ p{
     #derf{
       margin: 10px;
       letter-spacing: -1px;
+    }
+  
+        .baz {
+          position: relative;
+      height: 110vh;
+      z-index: 6;
     }
 </style>
 <body>
@@ -272,6 +281,7 @@ p{
       </div>
    </div> 
   </div>
+  <div class="baz">
   <div class="ver">
     <br>
     <br><br>
@@ -317,10 +327,7 @@ p{
            })
   </script>
 <div class="re">
-               <div class="cl">
-               <br>
-               <br><br>
-  <br>
+               <div class="cl"><br><br><br><br>
   <div class="selc">
     <div class="iop">
        <ion-icon style="font-size: 15px; color: #6D6D6D;" name="logo-github"></ion-icon>
@@ -335,8 +342,8 @@ p{
         <script>
           const texty = document.querySelector('.texty');
           const textes = document.querySelector('.textes');
-          texty.innerHTML = "<p> <ion-icon style='font-size: 20px;' name='logo-npm'></ion-icon> To be good in a cold world is to carry heat where no one feels it.</p>"
-          textes.innerHTML = "<p> <ion-icon style='font-size: 20px;' name='logo-npm'></ion-icon> To be good in a cold world is to carry heat where no one feels it.</p>"
+          texty.innerHTML = "<i> <ion-icon style='font-size: 20px;' name='logo-npm'></ion-icon> Hola usuario, comparte nuestro sitio con tus amigos, crea un perfil de divulgación.</i>";
+          textes.innerHTML = "<i> <ion-icon style='font-size: 20px;' name='logo-npm'></ion-icon> Hola usuario, comparte nuestro sitio con tus amigos, crea un perfil de divulgación.</i>";
 
         </script>
       </div>
@@ -365,37 +372,44 @@ p{
                 </div>
                </div>
              </div>
-           </div>
   </center>
-    
-    <div class="god" style="width:80%; margin: 0 auto 10px;">
+               </div>
+               </div>
+    <div class="god" style="width:100%; margin: 0 auto 10px;">
     </div>
     <div class="flexd">
       <div class="fh">
              <div class="games">
-       <p id="home" class="">Home</p>
+               <ion-icon class="leaf" name="leaf" style="font-size: 25px;"></ion-icon>
+       <p id="home" style="font-size: 14px;">Início</p>
      </div>
         <div class="games">
-          <p id="game" class="">Games</p>
+          <ion-icon class="contro" name="game-controller-outline" style="font-size: 25px;"></ion-icon>
+          <p id="game" style="font-size: 14px;">Games</p>
         </div>
         <div class="games">
-        <p id="gale">Galeria</p>
+          <ion-icon class="leas" name="images-outline" style="font-size: 25px;"></ion-icon>
+        <p id="gale" style="font-size: 14px;">Galeria</p>
         </div>
+         <div class="games">
+           <ion-icon name="sparkles-outline" style="font-size: 25px;"></ion-icon>
+   <p id="game" class="" style="font-size: 14px;">Criar</p>
+ </div>
       </div>
     </div>
     <br>
-</div>
 <div class="clicks">
   <div class="gamesd">
-    <p>not the games!</p>
+        <h2 id="derf">Jogue agora mesmo</h2>    
+      <p style="font-size: 16px; color: #6D6D6D; margin-left: 10px;">Algunos juegos se lanzarán en la próxima actualización del sitio, estén atentos</p>
   </div>
   <div class="homeclick">
-<h2 id="derf">Welcome to web winks</h2>    
-      <p style="font-size: 16px; color: #6D6D6D; margin-left: 10px;">A man's past can be his perdition, when ancient shadows guide his choices.</p>
+    <h2 id="derf">Welcome to web winks</h2>    
+      <p style="font-size: 16px; color: #6D6D6D; margin-left: 10px;">Un sitio web creado para ti, con algunas API, creación de perfiles, divulgaciones, juegos de cosplay y anime jpeg.</p>
   </div>
   <div class="files">
   <h2 id="derf">Galeria de Imagens</h2>
-  <p style="font-size: 16px; color: #6D6D6D; margin-left: 10px;">Uma API simples com mais de 100 imagens de garotas aleatórias do <span style=" color: #3193e4;">Pinterest</span>.</p>
+  <p style="font-size: 16px; color: #6D6D6D; margin-left: 10px;">Uma <a style="text-decoration: none; color: #3193e4;" href="https://raw.githubusercontent.com/trezhywinks/api-jpeg/refs/heads/main/data.json">API</a> simples com mais de 100 imagens de garotas aleatórias do <span style=" color: #3193e4;">Pinterest</span></p>
   <div id="galeria"></div>
   <div id="overlay" class="overlay"></div>
   <style>
@@ -415,20 +429,6 @@ p{
   z-index: 999;
   display: none;
 }
-
-/*
-.imagem-ativa {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 50vh;
-  z-index: 1000;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-}*/
-
-
 .btn-fechar {
   position: fixed;
   top: 20px;
@@ -550,35 +550,80 @@ dow.download = "trezhywinks.webp";
   const files = document.querySelector(".files");
   const games = document.querySelector(".gamesd");
   const hclick = document.querySelector(".homeclick");
+  const contro = document.querySelector(".contro");
+  const leaf = document.querySelector(".leaf");
+  const leas = document.querySelector(".leas");
   
   gale.addEventListener("click", () =>{
-    gale.style.color = "#3193e4";
+    gale.style.color = "#fff";
     ho.style.color = "#6D6D6D";
     game.style.color = "#6D6D6D";
     files.style.display = "inline";
     hclick.style.display = "none";
     games.style.display = "none";
+    contro.name = "game-controller-outline";
+    leaf.name = "leaf-outline";
+    leas.name = "images";
     //files.classList.toggle("ativo");
   } );
     ho.addEventListener("click", () => {
     gale.style.color = "#6D6D6D";
-    ho.style.color = "#3193e4";
+    ho.style.color = "#fff";
     game.style.color = "#6D6D6D";
     files.style.display = "none";
     hclick.style.display = "inline";
     games.style.display = "none";
+    contro.name = "game-controller-outline";
+    leaf.name = "leaf";
+    leas.name = "images-outline";
+
     //files.classList.toggle("ativo");
   });
       game.addEventListener("click", () => {
       gale.style.color = "#6D6D6D";
       ho.style.color = "#6D6D6D";
-      game.style.color = "#3193e4";
+      game.style.color = "#fff";
       files.style.display = "none";
       hclick.style.display = "none";
       games.style.display = "inline";
+      contro.name = "game-controller";
+    leaf.name = "leaf-outline";
+    leas.name = "images-outline";
       //files.classList.toggle("ativo");
     });
 </script>
+<br><br><br>
+<br><br><br><br>
+<br><br><br><br><br>
+  </div>
+
+<div class="sl">
+  <style>
+  .shl {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 10px;
+
+  background: #000;
+  height: 80px; /* ou min-height */
+  z-index: 999;
+}
+    .sl{
+      position: fixed; bottom:0; padding: 10px;  background: #000; left: 0; right: 0; height: 80px; z-index: 9; 
+      inset: auto 0 0 0;
+  min-height: 80px;
+  padding: 10px;
+  padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    }
+  </style>
+  <div class="ls">
+   <p>&copy; trezhywinks 2026</p> 
+  </div>
+</div>
+  <div class="cc"></div>
 </body>
 
 </html>
