@@ -414,22 +414,22 @@ font-size: 14px !important;
     <div class="god" style="width:100%; margin: 0 auto 10px;">
     </div>
     <div class="flexd">
-      <div class="fh">
-             <div class="games">
-               <ion-icon class="leaf" name="leaf" style="font-size: 25px;"></ion-icon>
-       <p id="home" style="font-size: 14px;">Início</p>
+        <div class="fh">
+             <div class="games" id="home">
+               <ion-icon class="leaf" name="leaf" style="font-size: 25px; color: #fff;"></ion-icon>
+       <p class="j1" style="font-size: 14px;">Início</p>
      </div>
-        <div class="games">
+        <div class="games" id="game">
           <ion-icon class="contro" name="game-controller-outline" style="font-size: 25px;"></ion-icon>
-          <p id="game" style="font-size: 14px;">Games</p>
+          <p class="j2" style="font-size: 14px;">Games</p>
         </div>
-        <div class="games">
+        <div class="games" id="gale">
           <ion-icon class="leas" name="images-outline" style="font-size: 25px;"></ion-icon>
-        <p id="gale" style="font-size: 14px;">Galeria</p>
+        <p class="j3"  style="font-size: 14px;">Galeria</p>
         </div>
          <div class="games">
            <ion-icon name="sparkles-outline" style="font-size: 25px;"></ion-icon>
-   <p id="game" class="" style="font-size: 14px;">Criar</p>
+   <p id="creat" class="" style="font-size: 14px;">Criar</p>
  </div>
       </div>
     </div>
@@ -580,7 +580,7 @@ dow.download = "trezhywinks.webp";
   </div>
 </div>
 <script>
-  const gale = document.getElementById("gale");
+ const gale = document.getElementById("gale");
   const ho = document.getElementById("home");
   const game = document.getElementById("game");
   const files = document.querySelector(".files");
@@ -589,6 +589,10 @@ dow.download = "trezhywinks.webp";
   const contro = document.querySelector(".contro");
   const leaf = document.querySelector(".leaf");
   const leas = document.querySelector(".leas");
+  const j1 = document.querySelector(".j1");
+  const j2 = document.querySelector(".j2");
+  const j3= document.querySelector(".j3");
+  const j4 = document.querySelector(".j4");
   
   gale.addEventListener("click", () =>{
     gale.style.color = "#fff";
@@ -598,8 +602,14 @@ dow.download = "trezhywinks.webp";
     hclick.style.display = "none";
     games.style.display = "none";
     contro.name = "game-controller-outline";
+    contro.style.color = "#6D6D6D";
+    j2.style.color = "#6D6D6D";
     leaf.name = "leaf-outline";
+    leaf.style.color = "#6D6D6D";
     leas.name = "images";
+    leas.style.color = "#fff";
+    j3.style.color = "#fff";
+    j1.style.color = "#6D6D6D";
     //files.classList.toggle("ativo");
   } );
     ho.addEventListener("click", () => {
@@ -610,9 +620,14 @@ dow.download = "trezhywinks.webp";
     hclick.style.display = "inline";
     games.style.display = "none";
     contro.name = "game-controller-outline";
+    contro.style.color = "#6D6D6D";
+    j2.style.color = "#6D6D6D";
     leaf.name = "leaf";
+    leaf.style.color = "#fff";
     leas.name = "images-outline";
-
+    j3.style.color = "#6D6D6D";
+    j1.style.color = "#fff";
+    leas.style.color = "#6D6D6D";
     //files.classList.toggle("ativo");
   });
       game.addEventListener("click", () => {
@@ -623,10 +638,18 @@ dow.download = "trezhywinks.webp";
       hclick.style.display = "none";
       games.style.display = "inline";
       contro.name = "game-controller";
+      contro.style.color = "#fff";
+      j2.style.color = "#fff";
     leaf.name = "leaf-outline";
     leas.name = "images-outline";
+    j3.style.color = "#6D6D6D";
+    leas.style.color = "#6D6D6D";
+    j1.style.color = "#6D6D6D";
+    leaf.style.color = "#6D6D6D";
+
       //files.classList.toggle("ativo");
     });
+ 
 </script>
 <br><br><br>
 <br><br><br><br>
