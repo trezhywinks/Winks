@@ -38,22 +38,38 @@
     background: #101010;
     font-family: Arial, Helvetica, sans-serif;
   }
-  .top {
+  .top{
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  height: 56px;
   background: #0C0C0CDB;
   backdrop-filter: blur(25px);
-  height: 64px;
-  /*min-height: calc(56px + env(safe-area-inset-top));
-  padding-top: env(safe-area-inset-top);*/
   
-  z-index: 20;
+  min-height: calc(56px + env(safe-area-inset-top));
+  padding-top: env(safe-area-inset-top);
+  
+  z-index: 999;
   display: flex;
   align-items:center;
   justify-content: space-between;
 }
+
+.top::before {
+  content: "";
+  position: absolute;
+  top: calc(-1 * env(safe-area-inset-top));
+  left: 0;
+  right: 0;
+  
+  height: env(safe-area-inset-top);
+  background: #0C0C0CDB;
+  backdrop-filter: blur(25px);
+  
+  z-index: -1;
+}
+
    
   .as{
    display: flex;
