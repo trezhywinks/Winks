@@ -38,7 +38,7 @@
     font-family: Arial, Helvetica, sans-serif;
   }
   
-  bodyy::before {
+  body::before {
   content: "";
   position: fixed;
   top: 0;
@@ -46,7 +46,8 @@
   right: 0;
   height: 100px;
   background: #0C0C0CDB;
-  z-index: 12;
+  z-index: 999;
+  display: none;
 }
   
   .top{
@@ -333,8 +334,12 @@ font-size: 14px !important;
       transform: translateY(0);
       }
     }
+    .re, .clicks{
+      display:;
+    }
 </style>
 <body>
+
   <div class="top">
     <div class="lines" id="menu">
   <div class="line line1"></div>
@@ -348,13 +353,11 @@ font-size: 14px !important;
       </div>
    </div> 
   </div>
-  <br><br>
   <div class="baz">
   <div class="ver">
-    <br>
+        <br>
     <br><br>
-    <br><br><br><br><br>
-
+    <br>
 <div class="perfil" id="perfil">
   <h2>Carregando perfil...</h2>
 </div>
@@ -430,6 +433,7 @@ font-size: 14px !important;
                  <div class="git">
              <div class="o">
                <img src="https://raw.githubusercontent.com/trezhywinks/API-Makima/main/IMG_4969.jpeg" width="120" height="120" style="border-radius: 100%; border: 5px solid #121212;" />
+              <!-- https://raw.githubusercontent.com/trezhywinks/API-Makima/main/IMG_4998.jpeg-->
              </div>
              <div class="e">
                <h2>trezhywinks</h2>
@@ -462,13 +466,121 @@ font-size: 14px !important;
           <ion-icon class="leas" name="images-outline" style="font-size: 25px;"></ion-icon>
         <p class="j3"  style="font-size: 14px;">Galeria</p>
         </div>
-         <div class="games">
-           <ion-icon name="sparkles-outline" style="font-size: 25px;"></ion-icon>
-   <p id="creat" class="" style="font-size: 14px;">Criar</p>
+         <div class="games" id="xc">
+           <ion-icon class="sparkles" name="sparkles-outline" style="font-size: 25px;"></ion-icon>
+   <p id="creat" class="j4" style="font-size: 14px;">Winks</p>
  </div>
       </div>
     </div>
-    <br>
+    <div class="server">
+      <style>
+        .server{
+          position:;
+          top: 0;
+          text-align: center;
+          height: 100vh;
+         min-height: calc(56px + env(safe-area-inset-top));
+padding-top: env(safe-area-inset-top);
+background: #0C0C0CDB;
+z-index: 12;
+display: none;
+        }
+        .server::before {
+  content: "";
+  position: absolute;
+  top: calc(-1 * env(safe-area-inset-top));
+  left: 0;
+  right: 0;
+  
+  height: env(safe-area-inset-top);
+  background: #0C0C0CDB;
+  backdrop-filter: blur(25px);
+  
+  z-index: -1;
+}
+        .banner{
+          position: ; top: 0;
+          left: 0; right: 0;
+          background-image: url("./IMG_4894.png");
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          overflow: hidden;
+          height:20vh;
+        }
+        .ipo{
+          display: flex;
+        }
+        .snixx{
+          margin-left: 5px;
+          margin-top: 1px;
+        }
+        #ds{
+          font-size: 17px;
+        }
+        .like{
+          position: fixed;
+          bottom: 25%;
+          right: 20px;
+        }
+      </style>
+     <div class="logo">
+       <div class="banner">
+                  <div class="ipo" style="margin-top: 35%;">
+            <div class="iponi">
+            <ion-icon style="font-size:17px; color: #6D6D6D;" name="ribbon-outline"></ion-icon>
+            </div>
+             <div class="snixx">
+               <p>verificado</p>
+             </div> 
+          </div>
+       </div>
+       <div class="perfect" style="position: relative; margin-top: -25px;">
+       <img src="./IMG_4994.jpeg" width="90" height="90"/>
+       <br>
+       <h3>trezhywinks</h3>
+       <div class="cute" style="display: flex; width: 80%; margin: 10px auto 10px; justify-content: space-around;">
+               <div class="ipo">
+            <div class="iponi">
+            <ion-icon style="font-size: 20px; color: #6D6D6D;" name="eye-outline"></ion-icon>
+            </div>
+             <div class="snixx">
+               <p id="ds">569 K</p>
+             </div> 
+          </div>
+        <div class="ipo" id="like">
+  <div class="iponi">
+    <ion-icon id="likeIcon" style="font-size:20px; color: #6D6D6D;" name="heart-outline"></ion-icon>
+  </div>
+  <div class="snixx">
+    <p id="ds">579 K</p>
+  </div>
+</div>
+
+          <div class="ipo" id="like">
+            <div class="iponi">
+            <ion-icon style="font-size:20px; color: #6D6D6D;" name="people-outline"></ion-icon>
+            </div>
+             <div class="snixx">
+               <p id="ds">579 K</p>
+             </div> 
+          </div>
+                  <div class="ipo">
+            <div class="iponi">
+            <ion-icon style="font-size:20px; color: #6D6D6D;" name="earth-outline"></ion-icon>
+            </div>
+             <div class="snixx">
+               <p id="ds">46</p>
+             </div> 
+          </div>
+
+       </div>
+       <div class="recado" style="width: 80%; margin: 0 auto 10px;">
+        <p>Perfil de creador, soy uno de los creadores del sitio winks</p> 
+       </div>
+       </div>
+     </div>
+    </div>
 <div class="clicks">
   <div class="gamesd">
         <h2 id="derf">Jogue agora mesmo</h2>    
@@ -753,7 +865,11 @@ fetch("https://raw.githubusercontent.com/trezhywinks/API-Makima/refs/heads/main/
   </div>
 </div>
 <script>
+//clicks
   const gale = document.getElementById("gale");
+  const removc = document.querySelector(".top");
+  const redf = document.querySelector(".re");
+  const reds = document.querySelector(".clicks");
   const ho = document.getElementById("home");
   const game = document.getElementById("game");
   const files = document.querySelector(".files");
@@ -765,8 +881,12 @@ fetch("https://raw.githubusercontent.com/trezhywinks/API-Makima/refs/heads/main/
   const leas = document.querySelector(".leas");
   const j1 = document.querySelector(".j1");
   const j2 = document.querySelector(".j2");
-  const j3= document.querySelector(".j3");
+  const j3 = document.querySelector(".j3");
   const j4 = document.querySelector(".j4");
+const seri = document.querySelector(".server");
+const sparkles = document.querySelector(".sparkles");
+const xc = document.getElementById("xc");
+
   
   gale.addEventListener("click", () =>{
     gale.style.color = "#fff";
@@ -785,6 +905,13 @@ fetch("https://raw.githubusercontent.com/trezhywinks/API-Makima/refs/heads/main/
     leas.style.color = "#fff";
     j3.style.color = "#fff";
     j1.style.color = "#6D6D6D";
+    j4.style.color = "#6D6D6D";
+    seri.style.display = "none";
+    removc.style.display = "flex";
+    redf.style.display = "inline";
+    sparkles.name = "sparkles-outline";
+sparkles.style.color = "#6D6D6D";
+    reds.style.display = "inline";
     //files.classList.toggle("ativo");
   } );
     ho.addEventListener("click", () => {
@@ -804,6 +931,12 @@ fetch("https://raw.githubusercontent.com/trezhywinks/API-Makima/refs/heads/main/
     j3.style.color = "#6D6D6D";
     j1.style.color = "#fff";
     leas.style.color = "#6D6D6D";
+    j4.style.color = "#6D6D6D";
+    seri.style.display = "none";
+    removc.style.display = "flex";
+    redf.style.display = "inline"
+sparkles.name = "sparkles-outline";
+sparkles.style.color = "#6D6D6D";
     //files.classList.toggle("ativo");
   });
       game.addEventListener("click", () => {
@@ -823,12 +956,67 @@ fetch("https://raw.githubusercontent.com/trezhywinks/API-Makima/refs/heads/main/
     leas.style.color = "#6D6D6D";
     j1.style.color = "#6D6D6D";
     leaf.style.color = "#6D6D6D";
+    j4.style.color = "#6D6D6D";
+    seri.style.display = "none";
+    removc.style.display = "flex";
+    redf.style.display = "inline";
+    sparkles.name = "sparkles-outline";
+    sparkles.style.color = "#6D6D6D";
 
-      //files.classList.toggle("ativo");
-      
     });
+  xc.addEventListener("click", () => {
+  seri.style.display = "inline";
+  sparkles.name = "sparkles";
+  sparkles.style.color = "#fff";
+  j4.style.color = "#fff";
+  gale.style.color = "#6D6D6D";
+git.style.display = "block";
+ho.style.color = "#6D6D6D";
+game.style.color = "#6D6D6D";
+files.style.display = "none";
+hclick.style.display = "none";
+games.style.display = "none";
+contro.name = "game-controller-outline";
+contro.style.color = "#6D6D6D";
+j2.style.color = "#6D6D6D";
+leaf.name = "leaf";
+leaf.style.color = "#6D6D6D";
+leas.name = "images-outline";
+j3.style.color = "#6D6D6D";
+j1.style.color = "#6D6D6D";
+leas.style.color = "#6D6D6D";
+removc.style.display = "none";
+    redf.style.display = "none"
+//files.classList.toggle("ativo");
+});
+  
 </script>
+
   </div>
+  <script>
+  const likeBtn = document.getElementById('like');
+  const likeIcon = document.getElementById('likeIcon');
+  const likeCount = document.getElementById('ds');
+  
+  const likeKey = 'userLiked';
+  
+  if (localStorage.getItem(likeKey)) {
+    likeIcon.setAttribute('name', 'heart');
+    likeIcon.style.color = '#e63946';
+  }
+  
+  likeBtn.addEventListener('click', () => {
+    if (localStorage.getItem(likeKey)) return;
+    
+    localStorage.setItem(likeKey, 'true');
+    
+    likeIcon.setAttribute('name', 'heart');
+    likeIcon.style.color = '#e63946';
+    
+    let currentLikes = parseInt(likeCount.innerText.replace(' K', ''));
+    likeCount.innerText = (currentLikes + 1) + ' K';
+  });
+</script>
   <div class="cc"></div>
 </body>
 
