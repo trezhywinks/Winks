@@ -8,7 +8,7 @@
   <meta name="description" content="I creat and destroy when I want, just for fun like a God, but I'm not God" />
   <meta name="og:description" content="I creat and destroy when I want, just for fun like a God, but I'm not God<" />
   <meta name="og:url" content="" />
-  <meta name="og:title" content="TrezhyWinks" />
+  <meta name="og:title" content="trezhywinks" />
   <meta name="og:image" content="https://avatars.githubusercontent.com/u/205466886?v=4" />
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/205466886?v=4" />
   <meta property="og:image:secure_url" content="https://avatars.githubusercontent.com/u/205466886?v=4" />
@@ -45,7 +45,7 @@
   -webkit-overflow-scrolling: touch;
 }
   
-  bodyy::before {
+  body::before {
   content: "";
   position: fixed;
   top: 0;
@@ -63,17 +63,17 @@
   left: 0;
   right: 0;
   height: 56px;
-  background: #0C0C0CDB;
-  backdrop-filter: blur(20px);
+  background: #101010;
   border-bottom: 1px solid #6D6D6D5E;
   
   min-height: calc(56px + env(safe-area-inset-top));
   padding-top: env(safe-area-inset-top);
   
-  z-index: 9999;
   display: flex;
   align-items:center;
   justify-content: space-between;
+  z-index: 10;
+
 }
 
 .top::before {
@@ -140,6 +140,9 @@
 }
 
 .ver.ativo{
+  top: 0;
+}
+.ver.remove{
   top: 0;
 }
 .slider {
@@ -344,6 +347,21 @@ font-size: 14px !important;
     .re, .clicks{
       display:;
     }
+    .sedq{
+      border-radius: 100px;
+      width: 40px;
+      height: 40px;
+    }
+    
+    .qik{
+      display: flex;
+      margin-right: 10px;
+      justify-content: space-between;
+      width: 80px;
+    }
+    .nefs{
+      margin-top: 10px;
+    }
 </style>
 <body>
 
@@ -355,7 +373,13 @@ font-size: 14px !important;
 </div>
 
    <div class="qik">
-           <div class="io" style="text-align: center; margin-right:10px;">
+     <div class="nefs">
+      <ion-icon style="color: #6D6D6D; font-size: 20px;" name="newspaper-outline"></ion-icon> 
+     </div>
+     <div class="perfs">
+      <img class="sedq" src="https://raw.githubusercontent.com/trezhywinks/Winks/refs/heads/main/IMG_4994.jpeg" />
+      </div>
+           <div class="io" style="text-align: center; margin-right:10px; display: none;">
         <img src="https://count.getloli.com/@Trezhywinks?name=Trezhywinks&theme=booru-lisu&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto" width="150" /><br>
       </div>
    </div> 
@@ -470,8 +494,8 @@ font-size: 14px !important;
           <p class="j2" style="font-size: 14px;">Games</p>
         </div>
         <div class="games" id="gale">
-          <ion-icon class="leas" name="images-outline" style="font-size: 25px;"></ion-icon>
-        <p class="j3"  style="font-size: 14px;">Galeria</p>
+          <ion-icon class="leas" name="library-outline" style="font-size: 25px;"></ion-icon>
+        <p class="j3"  style="font-size: 14px;">Biblioteca</p>
         </div>
          <div class="games" id="xc">
            <ion-icon class="sparkles" name="sparkles-outline" style="font-size: 25px;"></ion-icon>
@@ -620,36 +644,26 @@ display: none;
   <div class="view">
  <button class="vb" onclick="bv();">ver todas as imagens</button>
  <button class="url" onclick="vb();">URL</button>
- <script>
-   function vb() {
-     window.location.href = "https://raw.githubusercontent.com/trezhywinks/api-jpeg/refs/heads/main/data.json";
-   }
-  function bv(){
-    document.getElementById("makima").style.display = "none";
-    document.getElementById("galeria").style.display = "inline";
-  }   
-    </script>
+    </div>
+    <div id="galeria" style="display: none;"></div>
+       <div class="imagem-menos" style="display: none;">
+  <button class="view" style="font-size: 20px; color: #3193e4;">ver menos</button>  
   </div>
-  <div id="galeria" style="display: none;"></div>
+ <br>
+
   <h2 id="derf">Makima Cosplay</h2>
   <p style="font-size: 16px; color: #6D6D6D; margin-left: 10px;">Uma <a style="text-decoration: none; color: #3193e4;" href="https://raw.githubusercontent.com/trezhywinks/API-Makima/refs/heads/main/makima.json">API</a> simples com mais de 100 imagens de Cosplay da Makima & Power</p>
  <br>
   <div class="view">
  <button class="vb" onclick="cv();">ver todas as imagens</button>
  <button class="url" onclick="vc();">URL</button>
-   <script>
-   function vc() {
-     window.location.href = "https://raw.githubusercontent.com/trezhywinks/API-Makima/refs/heads/main/makima.json";
-   }
-   
-     function cv(){
-    document.getElementById("makima").style.display = "inline";
-    document.getElementById("galeria").style.display = "none";
-  }   
-
-    </script>
-  </div>
+ </div>
+ 
   <div id="makima" style="display: none;"></div>
+  <div class="makima-menos" style="display: none;">
+  <button class="view" style="font-size: 20px; color: #3193e4;">ver menos</button>  
+ <br>
+  </div>
   <br>
   <br>
   <br>
@@ -657,6 +671,42 @@ display: none;
   <br>
   <br>
   <div id="overlay" class="overlay"></div>
+     <script>
+   const makinb = document.querySelector(".makima-menos");
+   function vc() {
+     window.location.href = "https://raw.githubusercontent.com/trezhywinks/API-Makima/refs/heads/main/makima.json";
+   }
+   
+     function cv(){
+    document.getElementById("makima").style.display = "inline";
+    document.querySelector(".makima-menos").style.display = "inline";
+    document.getElementById("galeria").style.display = "none";
+    document.querySelector(".imagem-menos").style.display = "none";
+  } 
+  
+  makinb.addEventListener("click", () => {
+    document.getElementById("makima").style.display = "none";
+    document.querySelector(".makima-menos").style.display = "none";
+  });
+  
+    </script>
+    
+ <script>
+   function vb() {
+     window.location.href = "https://raw.githubusercontent.com/trezhywinks/api-jpeg/refs/heads/main/data.json";
+   }
+   
+   function bv() {
+     document.getElementById("makima").style.display = "none";
+     document.querySelector(".imagem-menos").style.display = "inline";
+     document.getElementById("galeria").style.display = "inline";
+     document.querySelector(".makima-menos").style.display = "none";
+   }
+   document.querySelector(".imagem-menos").addEventListener("click", ()  =>{
+     document.querySelector(".imagem-menos").style.display = "none";
+     document.getElementById("galeria").style.display = "none";
+   } )
+ </script>
   <style>
   #galeria{
    text-align: center;
@@ -695,7 +745,8 @@ display: none;
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
   z-index: 999;
   display: none;
 }
@@ -703,7 +754,7 @@ display: none;
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 1001;
+  z-index: 99999;
   background: #fff;
   border: none;
   font-size: 20px;
@@ -716,7 +767,7 @@ display: none;
 top: 20px;
 left: 20px;
 width: 70%;
-z-index: 1001;
+z-index: 99999;
 background: #3193e4;
 color: #000;
 letter-spacing: -1px;
@@ -785,6 +836,7 @@ text-decoration: none;
   
   img.classList.add("imagem-ativa");
   overlay.style.display = "block";
+  document.querySelector(".top").style.display = "none";
   
   const btn = document.createElement("button");
   const dow = document.createElement("a");
@@ -792,11 +844,12 @@ text-decoration: none;
   btn.className = "btn-fechar";
  dow.textContent = "Salvar";
 dow.className = "dow";
+dow.download 
 dow.href = item.url;
-dow.download = "trezhywinks.webp";
   btn.addEventListener("click", () => {
     img.classList.remove("imagem-ativa");
     overlay.style.display = "none";
+    document.querySelector(".top").style.display = "flex";
     btn.remove();
     dow.remove();
   });
@@ -839,6 +892,7 @@ fetch("https://raw.githubusercontent.com/trezhywinks/API-Makima/refs/heads/main/
         
         img.classList.add("makima-ativa");
         overlayMakima.style.display = "block";
+        document.querySelector(".top").style.display = "none";
         
         const btn = document.createElement("button");
         const dow = document.createElement("a");
@@ -854,6 +908,7 @@ fetch("https://raw.githubusercontent.com/trezhywinks/API-Makima/refs/heads/main/
         btn.addEventListener("click", () => {
           img.classList.remove("makima-ativa");
           overlayMakima.style.display = "none";
+          document.querySelector(".top").style.display = "flex";
           btn.remove();
           dow.remove();
         });
@@ -908,7 +963,7 @@ const xc = document.getElementById("xc");
     j2.style.color = "#6D6D6D";
     leaf.name = "leaf-outline";
     leaf.style.color = "#6D6D6D";
-    leas.name = "images";
+    leas.name = "library";
     leas.style.color = "#fff";
     j3.style.color = "#fff";
     j1.style.color = "#6D6D6D";
@@ -934,7 +989,7 @@ sparkles.style.color = "#6D6D6D";
     j2.style.color = "#6D6D6D";
     leaf.name = "leaf";
     leaf.style.color = "#fff";
-    leas.name = "images-outline";
+    leas.name = "library-outline";
     j3.style.color = "#6D6D6D";
     j1.style.color = "#fff";
     leas.style.color = "#6D6D6D";
@@ -958,7 +1013,7 @@ sparkles.style.color = "#6D6D6D";
       contro.style.color = "#fff";
       j2.style.color = "#fff";
     leaf.name = "leaf-outline";
-    leas.name = "images-outline";
+    leas.name = "library-outline";
     j3.style.color = "#6D6D6D";
     leas.style.color = "#6D6D6D";
     j1.style.color = "#6D6D6D";
@@ -986,9 +1041,9 @@ games.style.display = "none";
 contro.name = "game-controller-outline";
 contro.style.color = "#6D6D6D";
 j2.style.color = "#6D6D6D";
-leaf.name = "leaf";
+leaf.name = "leaf-outline";
 leaf.style.color = "#6D6D6D";
-leas.name = "images-outline";
+leas.name = "library-outline";
 j3.style.color = "#6D6D6D";
 j1.style.color = "#6D6D6D";
 leas.style.color = "#6D6D6D";
@@ -996,6 +1051,35 @@ removc.style.display = "none";
     redf.style.display = "none"
 //files.classList.toggle("ativo");
 });
+
+document.querySelector(".perfs").addEventListener("click", () => {
+  seri.style.display = "inline";
+sparkles.name = "sparkles";
+sparkles.style.color = "#fff";
+j4.style.color = "#fff";
+gale.style.color = "#6D6D6D";
+git.style.display = "block";
+ho.style.color = "#6D6D6D";
+game.style.color = "#6D6D6D";
+files.style.display = "none";
+hclick.style.display = "none";
+games.style.display = "none";
+contro.name = "game-controller-outline";
+contro.style.color = "#6D6D6D";
+j2.style.color = "#6D6D6D";
+leaf.name = "leaf-outline";
+leaf.style.color = "#6D6D6D";
+leas.name = "library-outline";
+j3.style.color = "#6D6D6D";
+j1.style.color = "#6D6D6D";
+leas.style.color = "#6D6D6D";
+removc.style.display = "none";
+redf.style.display = "none";
+if (ver.classList.contains("ativo")) {
+  ver.classList.remove("ativo");
+  lines.classList.toggle("ativo");
+}
+} );
   
 </script>
 
