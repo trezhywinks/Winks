@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="I creat and destroy when I want, just for fun like a God, but I'm not God" />
   <meta name="og:description" content="I creat and destroy when I want, just for fun like a God, but I'm not God<" />
   <meta name="og:url" content="" />
@@ -38,14 +37,18 @@
     background: #101010;
     font-family: Arial, Helvetica, sans-serif;
   }
-
-  .games ion-icon{
-  color: #6D6D6D;
+  
+  bodyy::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: #0C0C0CDB;
+  z-index: 12;
 }
-
-  .j1{
-    color: #fff;
-  }
+  
   .top{
   position: fixed;
   top: 0;
@@ -53,7 +56,8 @@
   right: 0;
   height: 56px;
   background: #0C0C0CDB;
-  backdrop-filter: blur(25px);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid #6D6D6D5E;
   
   min-height: calc(56px + env(safe-area-inset-top));
   padding-top: env(safe-area-inset-top);
@@ -77,7 +81,6 @@
   
   z-index: -1;
 }
-
    
   .as{
    display: flex;
@@ -222,7 +225,11 @@ padding-bottom: calc(10px + env(safe-area-inset-bottom));
 .games{
   margin: 5px;
 }
-#home{
+.games ion-icon{
+  color: #6D6D6D;
+}
+
+.j1{
   color: #fff;
 }
    /*.flexd{width: 100%;margin: 0 auto 10px;}*/
@@ -248,6 +255,7 @@ font-size: 14px !important;
   padding-right: 50px;
   color: #6D6D6D;
 }
+
 .linha-two {
   display: flex;
   width: 100%;
@@ -298,7 +306,7 @@ font-size: 14px !important;
       padding: 8px;
      border-radius: 10px
     }
-    
+   
     #derf{
       margin: 10px;
       letter-spacing: -1px;
@@ -309,7 +317,8 @@ font-size: 14px !important;
       height: 110vh;
       z-index: 6;
     }
-      .git{
+    
+    .git{
       transition: 0.5s;
       position: relative;
       z-index: 10;
@@ -344,7 +353,6 @@ font-size: 14px !important;
     <br>
     <br><br>
     <br>
-    <br><br><br>
 
 <div class="perfil" id="perfil">
   <h2>Carregando perfil...</h2>
@@ -386,7 +394,7 @@ font-size: 14px !important;
            })
   </script>
 <div class="re">
-               <div class="cl"><br><br><br><br><br><br>
+               <div class="cl"><br><br><br><br>
   <div class="selc">
     <div class="iop" style="margin-left: 10px;">
        <ion-icon style="font-size: 15px; color: #6D6D6D;" name="logo-github"></ion-icon>
@@ -418,9 +426,9 @@ font-size: 14px !important;
       </div>
     </div>
                <center>
-       <div class="git">
+                 <div class="git">
              <div class="o">
-               <img src="https://avatars.githubusercontent.com/u/205466886?v=4" width="120" style="border-radius: 100%; border: 5px solid #121212;" />
+               <img src="https://raw.githubusercontent.com/trezhywinks/API-Makima/main/IMG_4998.jpeg" width="120" height="120" style="border-radius: 100%; border: 5px solid #121212;" />
              </div>
              <div class="e">
                <h2>trezhywinks</h2>
@@ -433,13 +441,14 @@ font-size: 14px !important;
                </div>
              </div>
           </div>
+   
   </center>
                </div>
                </div>
     <div class="god" style="width:100%; margin: 0 auto 10px;">
     </div>
     <div class="flexd">
-        <div class="fh">
+      <div class="fh">
              <div class="games" id="home">
                <ion-icon class="leaf" name="leaf" style="font-size: 25px; color: #fff;"></ion-icon>
        <p class="j1" style="font-size: 14px;">Início</p>
@@ -463,35 +472,101 @@ font-size: 14px !important;
   <div class="gamesd">
         <h2 id="derf">Jogue agora mesmo</h2>    
       <p style="font-size: 16px; color: #6D6D6D; margin-left: 10px;">Algunos juegos se lanzarán en la próxima actualización del sitio, estén atentos</p>
-     <br>
+    <br>
     <div class="gf" style="margin-left: 20px; display: flex;">
    <div class="pipoca">
     <img src="https://img.itch.zone/aW1nLzIxNDk3MTAwLmdpZg==/original/mMZRks.gif" width="120"/> 
    </div> 
    <div class="twvs" style="margin-top: 5px; margin-left:20px;">
-     <h4>Soul Trouble</h4>
-     <p>Custom Animated +18 VN with H...</p>
+     <h4>Problemas da Alma</h4>
+     <p>Visual Novel animada personaliza...</p>
      <ion-icon style="color: #6D6D6D;" name="logo-tux"></ion-icon>
      <ion-icon style="color: #6D6D6D;" name="logo-apple"></ion-icon>
      <br>
      <a href="https://itch.io/c/6951569/trezhywinkss-collection" style="font-size: 12px; color: #fff;">jogue agora mesmo esse e outros jogos</a>
    </div>
   </div>
+
   </div>
   <div class="homeclick">
     <h2 id="derf">Welcome to web winks</h2>    
       <p style="font-size: 16px; color: #6D6D6D; margin-left: 10px;">Un sitio web creado para ti, con algunas API, creación de perfiles, divulgaciones, juegos de cosplay y anime jpeg.</p>
+  <br>
   </div>
   <div class="files">
   <h2 id="derf">Galeria de Imagens</h2>
   <p style="font-size: 16px; color: #6D6D6D; margin-left: 10px;">Uma <a style="text-decoration: none; color: #3193e4;" href="https://raw.githubusercontent.com/trezhywinks/api-jpeg/refs/heads/main/data.json">API</a> simples com mais de 100 imagens de garotas aleatórias do <span style=" color: #3193e4;">Pinterest</span></p>
-  <div id="galeria"></div>
+  <br>
+  <div class="view">
+ <button class="vb" onclick="bv();">ver todas as imagens</button>
+ <button class="url" onclick="vb();">URL</button>
+ <script>
+   function vb() {
+     window.location.href = "https://raw.githubusercontent.com/trezhywinks/api-jpeg/refs/heads/main/data.json";
+   }
+  function bv(){
+    document.getElementById("makima").style.display = "none";
+    document.getElementById("galeria").style.display = "inline";
+  }   
+    </script>
+  </div>
+  <div id="galeria" style="display: none;"></div>
+  <h2 id="derf">Makima Cosplay</h2>
+  <p style="font-size: 16px; color: #6D6D6D; margin-left: 10px;">Uma <a style="text-decoration: none; color: #3193e4;" href="https://raw.githubusercontent.com/trezhywinks/API-Makima/refs/heads/main/makima.json">API</a> simples com mais de 100 imagens de Cosplay da Makima & Power</p>
+ <br>
+  <div class="view">
+ <button class="vb" onclick="cv();">ver todas as imagens</button>
+ <button class="url" onclick="vc();">URL</button>
+   <script>
+   function vc() {
+     window.location.href = "https://raw.githubusercontent.com/trezhywinks/API-Makima/refs/heads/main/makima.json";
+   }
+   
+     function cv(){
+    document.getElementById("makima").style.display = "inline";
+    document.getElementById("galeria").style.display = "none";
+  }   
+
+    </script>
+  </div>
+  <div id="makima" style="display: none;"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <div id="overlay" class="overlay"></div>
   <style>
   #galeria{
    text-align: center;
   }
-        .imagem-container {
+  .url{
+    background: #1A6B1B;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 1px;
+    font-size: 17px;
+  }
+  .vb{
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    background: transparent;
+    color: #fff;
+  }
+  .view{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    border: 1px solid #6D6D6D5E;
+    background: #121212;
+    border-radius: 10px;
+    margin: 0 auto 10px;
+  }
+        .imagem-container, .makima-container {
       display: inline-block;
       justify-content: center;
       text-align: center;
@@ -504,7 +579,7 @@ font-size: 14px !important;
   z-index: 999;
   display: none;
 }
-.btn-fechar {
+.btn-fechar, .btn-fechar-makima {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -516,7 +591,7 @@ font-size: 14px !important;
   cursor: pointer;
   border-radius: 5px;
 }
-.dow{
+.dow, .dow-makima{
   position: fixed;
 top: 20px;
 left: 20px;
@@ -533,7 +608,7 @@ cursor: pointer;
 border-radius: 5px;
 text-decoration: none;
 }
-    .trezhy-image{
+    .trezhy-image, .makima-image{
      cursor: pointer;
        height:25vh;
       border-radius: 20px;
@@ -542,7 +617,7 @@ text-decoration: none;
       transition: all 0.1s ease-out;
     }
     
-    .imagem-ativa {
+    .imagem-ativa, .makima-ativa {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -558,11 +633,12 @@ text-decoration: none;
   box-shadow: 0 0 30px rgba(0,0,0,0.6);
 }
 
-    #text-image{
+    #text-image, .makima-text{
       font-size: 17px;
     }
   </style>
   <script>
+   //https://raw.githubusercontent.com/trezhywinks/API-Makima/refs/heads/main/makima.json
     fetch("https://raw.githubusercontent.com/trezhywinks/api-jpeg/refs/heads/main/data.json")
   .then(res => res.json())
   .then(dados => {
@@ -615,11 +691,68 @@ dow.download = "trezhywinks.webp";
     });
   })
   .catch(err => console.error("Erro ao carregar imagens:", err));
+  
+  // API da Makima
+fetch("https://raw.githubusercontent.com/trezhywinks/API-Makima/refs/heads/main/makima.json")
+  .then(res => res.json())
+  .then(dados => {
+    const galeriaMakima = document.getElementById("makima");
+    const overlayMakima = document.getElementById("overlay");
+    
+    dados.makima.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "makima-container";
+      
+      const img = document.createElement("img");
+      img.src = item.imagem;
+      img.alt = item.text || "Makima";
+      img.className = "makima-image";
+      
+      const p = document.createElement("p");
+      p.textContent = item.text || "Makima";
+      p.className = "makima-text";
+      
+      img.addEventListener("click", () => {
+        document
+          .querySelectorAll(".makima-ativa")
+          .forEach(el => el.classList.remove("makima-ativa"));
+        
+        img.classList.add("makima-ativa");
+        overlayMakima.style.display = "block";
+        
+        const btn = document.createElement("button");
+        const dow = document.createElement("a");
+        
+        btn.textContent = "✖";
+        btn.className = "btn-fechar-makima";
+        
+        dow.textContent = "Salvar";
+        dow.className = "dow-makima";
+        dow.href = item.imagem;
+        dow.download = "makima.webp";
+        
+        btn.addEventListener("click", () => {
+          img.classList.remove("makima-ativa");
+          overlayMakima.style.display = "none";
+          btn.remove();
+          dow.remove();
+        });
+        
+        document.body.appendChild(btn);
+        document.body.appendChild(dow);
+      });
+      
+      div.appendChild(img);
+      div.appendChild(p);
+      galeriaMakima.appendChild(div);
+    });
+  })
+  .catch(err => console.error("Erro ao carregar Makima:", err));
   </script>
   </div>
 </div>
 <script>
- const gale = document.getElementById("gale");
+  const gale = document.getElementById("gale");
   const ho = document.getElementById("home");
   const game = document.getElementById("game");
   const files = document.querySelector(".files");
@@ -691,11 +824,9 @@ dow.download = "trezhywinks.webp";
     leaf.style.color = "#6D6D6D";
 
       //files.classList.toggle("ativo");
+      
     });
 </script>
-<br><br><br>
-<br><br><br><br>
-<br><br><br><br><br>
   </div>
   <div class="cc"></div>
 </body>
