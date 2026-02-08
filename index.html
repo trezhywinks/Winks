@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="I creat and destroy when I want, just for fun like a God, but I'm not God" />
   <meta name="og:description" content="I creat and destroy when I want, just for fun like a God, but I'm not God<" />
@@ -37,6 +36,14 @@
     background: #101010;
     font-family: Arial, Helvetica, sans-serif;
   }
+
+        html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
   
   bodyy::before {
   content: "";
@@ -63,7 +70,7 @@
   min-height: calc(56px + env(safe-area-inset-top));
   padding-top: env(safe-area-inset-top);
   
-  z-index: 999;
+  z-index: 9999;
   display: flex;
   align-items:center;
   justify-content: space-between;
@@ -125,7 +132,7 @@
  overflow-y: auto;
  height: 100vh;
  position: fixed;
- top: -850px;
+ top: -950px;
  z-index: 12;
  left: 0;
  right: 0;
