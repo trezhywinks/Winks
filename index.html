@@ -22,6 +22,7 @@
     <link rel="manifest" href="manifest.json">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <title>trezhywinks</title>
 </head>
 <style>
@@ -57,7 +58,7 @@
   display: none;
 }
   
-  .top{
+  .top, .rectop{
   position: fixed;
   top: 0;
   left: 0;
@@ -73,8 +74,8 @@
   align-items:center;
   justify-content: space-between;
   z-index: 10;
-
 }
+
 
 .top::before {
   content: "";
@@ -142,9 +143,6 @@
 .ver.ativo{
   top: 0;
 }
-.ver.remove{
-  top: 0;
-}
 .slider {
   width: 90%;
   height: 24vh;
@@ -210,7 +208,7 @@
   z-index: 8;
 }
 
-.flexd{
+.flexd, .recbottom{
   text-align: center;
   background: #0C0C0CB5;
   backdrop-filter: blur(25px);
@@ -222,6 +220,34 @@
 min-height: 80px;
 height: 100px;
 padding-bottom: calc(10px + env(safe-area-inset-bottom));
+}
+.recbottom{
+  border-radius: 0;
+  display: none;
+}
+.rectop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: -450px;
+  height: 56px;
+  background: #101010;
+  border-bottom: 1px solid #6D6D6D5E;
+  
+  min-height: calc(56px + env(safe-area-inset-top));
+  padding-top: env(safe-area-inset-top);
+  
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  transition: 0.5s;
+  z-index: 10;
+
+}
+
+.rectop.ativo{
+  top: 0;
+  transition: 0.5s;
 }
 .fh{
   border-radius: 40px;
@@ -366,6 +392,9 @@ font-size: 14px !important;
 <body>
 
   <div class="top">
+    <div class="conn" style="display: none; margin-left: 10px;">
+    <h2 style="font-size: 25px; letter-spacing: -1px;">Conversas</h2>  
+    </div>
     <div class="lines" id="menu">
   <div class="line line1"></div>
   <div class="line line2"></div>
@@ -493,6 +522,10 @@ font-size: 14px !important;
           <ion-icon class="contro" name="game-controller-outline" style="font-size: 25px;"></ion-icon>
           <p class="j2" style="font-size: 14px;">Games</p>
         </div>
+              <div class="games" id="chat">
+        <ion-icon class="chat" name="chatbubbles-outline" style="font-size: 25px;"></ion-icon>
+        <p class="j5" style="font-size: 14px;">Conversas</p>
+      </div>
         <div class="games" id="gale">
           <ion-icon class="leas" name="library-outline" style="font-size: 25px;"></ion-icon>
         <p class="j3"  style="font-size: 14px;">Biblioteca</p>
@@ -532,7 +565,7 @@ display: none;
         .banner{
           position: ; top: 0;
           left: 0; right: 0;
-          background-image: url("https://raw.githubusercontent.com/trezhywinks/Winks/refs/heads/main/IMG_4894.png");
+          background-image: url("https://raw.githubusercontent.com/trezhywinks/Winks/refs/heads/main/IMG_5024.png");
           background-position: center center;
           background-size: cover;
           background-repeat: no-repeat;
@@ -554,6 +587,55 @@ display: none;
           bottom: 25%;
           right: 20px;
         }
+        
+        .initchat{
+          position: fixed;
+          left: 0;
+          right: 0;
+          display: none;
+          transition: 0.4s;
+          z-index: 9;
+        }
+        .initchat.ativo{
+         left: -450px;
+         transition: 5s;
+        }
+        
+        .shows{
+          width:250px;
+          margin-top: -32px;
+          background: #121212;
+          padding: 2px;
+          border-radius: 10px;
+          margin-left: 38px;
+          border: 1px solid #6D6D6D5E;
+        }
+        .balions{
+          height: 220px;
+          overflow: hidden;
+        }
+        .sedqa{
+          margin-top: -10px;
+          margin-left: 15px;
+        }
+        .suport{
+          position:fixed;
+          overflow-y: auto;
+          left: 450px;
+          background: #101010;
+          transition: 0.3s;
+        }
+        
+        .suport.ativo{
+          left: 0;
+          right: 0;
+          top: 0;
+          height: 100vh;
+          transition: 0.3s;
+          z-index: 99999;
+          overflow-y: auto;
+        }
+        
       </style>
      <div class="logo">
        <div class="banner">
@@ -612,6 +694,102 @@ display: none;
        </div>
      </div>
     </div>
+    <div class="initchat">
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="sertrezhy" style="display: flex; padding-left: 10px; width: 100%; z-index: 9;">
+        <div class="user-imagem">
+  <img src="https://raw.githubusercontent.com/trezhywinks/Winks/refs/heads/main/IMG_4994.jpeg" width="60" height="60" style="border-radius: 100px;"/>
+        </div>
+        <div class="user-name" style=" display: flex; justify-content: space-between; padding-left: 10px; padding-bottom: 10px; border-bottom: 1px solid #6D6D6D5E; width: 100%;">
+        <div class="fes">
+        <h3>trezhywinks</h3>
+        <p>Ver próximas actualizaciones</p>
+        </div>
+        <div class="fex" style="text-align: right; margin-right:10px;">
+          <p style="color: #3193e4;">ver ahora</p>
+          <box-icon style="fill: #6D6D6D;" name='dizzy'></box-icon>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="suport">
+        
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="pint">
+      <div class="convers" style="display: flex; padding: 10px;">
+      <div class="clow">
+     <img src="https://raw.githubusercontent.com/trezhywinks/Winks/refs/heads/main/IMG_4994.jpeg" width="40" height="40" style="border-radius: 100px;"/>
+      </div>
+      <div class="namesclow" style="margin-left: 5px;">
+       <p style="color:#fff;">trezhywinks</p> 
+       <p>verificado</p>
+      </div>
+      </div>
+      <div class="sedqa">
+       <box-icon style="fill:#fff;" name='subdirectory-right'></box-icon> 
+      </div>
+      <div class="shows">
+      <div class="balions">
+       <img src="https://avatars.githubusercontent.com/u/205466886?v=4" style="border-top-right-radius: 10px; border-top-left-radius: 10px;" width="100%"/>
+      </div>
+      <br>
+      <div class="dclow" style="padding: 5px;">
+      <span>trezhywinks - web</span>
+      <p>Próxima actualización próximamente, se añadirán correcciones de errores, ediciones y nuevas características</p>
+     </div>
+      </div>
+      </div>
+    
+  
+      <div class="rectop">
+        <div class="backtop">
+         <box-icon style="width: 50px; height: 50px; fill: #3193e4;" name='chevron-left'></box-icon> 
+        </div>
+           <div class="namesclow" style="text-align: center; width: 50%;">
+        <p style="color:#fff;">trezhywinks</p>
+        <p>Cuenta oficial de TrezhyWinks</p>
+      </div>
+      <div class="clowr" style="">
+     <img src="https://raw.githubusercontent.com/trezhywinks/Winks/refs/heads/main/IMG_4994.jpeg" width="40" height="40" style="border-radius: 100px; margin-right:3px ;"/>
+      </div>
+
+      </div>
+      
+      <div class="recbottom">
+        <br>
+        <p style="font-size: 15px;">Solo trezhywinks puede enviar mensajes.</p>
+      </div>
+  </div>
+    <script>
+    document.querySelector(".backtop").addEventListener("click", () => {
+      //document.querySelector(".initchat").style.display = "block";
+      document.querySelector(".suport").classList.toggle("ativo");
+      document.querySelector(".initchat").classList.toggle("ativo");
+      document.querySelector(".rectop").classList.toggle("ativo");
+      document.querySelector(".top").style.display = "flex";
+      document.querySelector(".flexd").style.display = "flex";
+      document.querySelector(".recbottom").style.display = "none";
+    } );
+    
+      document.querySelector(".sertrezhy").addEventListener("click", () =>{
+     // document.querySelector(".initchat").style.display = "none";
+      document.querySelector(".rectop").classList.toggle("ativo");
+      document.querySelector(".initchat").classList.toggle("ativo");
+      document.querySelector(".suport").classList.toggle("ativo");
+      document.querySelector(".top").style.display = "none";
+      document.querySelector(".flexd").style.display = "none";
+      document.querySelector(".recbottom").style.display = "inline";
+     
+      } );
+    </script>
+     
 <div class="clicks">
   <div class="gamesd">
         <h2 id="derf">Jogue agora mesmo</h2>    
@@ -934,6 +1112,8 @@ fetch("https://raw.githubusercontent.com/trezhywinks/API-Makima/refs/heads/main/
   const reds = document.querySelector(".clicks");
   const ho = document.getElementById("home");
   const game = document.getElementById("game");
+  const chat = document.getElementById("chat");
+  const chati = document.querySelector(".chat");
   const files = document.querySelector(".files");
   const git = document.querySelector(".git");
   const games = document.querySelector(".gamesd");
@@ -945,6 +1125,7 @@ fetch("https://raw.githubusercontent.com/trezhywinks/API-Makima/refs/heads/main/
   const j2 = document.querySelector(".j2");
   const j3 = document.querySelector(".j3");
   const j4 = document.querySelector(".j4");
+  const j5 = document.querySelector(".j5");
 const seri = document.querySelector(".server");
 const sparkles = document.querySelector(".sparkles");
 const xc = document.getElementById("xc");
@@ -974,6 +1155,13 @@ const xc = document.getElementById("xc");
     sparkles.name = "sparkles-outline";
 sparkles.style.color = "#6D6D6D";
     reds.style.display = "inline";
+    chati.name = "chatbubbles-outline";
+    chati.style.color = "#6D6D6D";
+    j5.style.color = "#6D6D6D";
+document.querySelector(".lines").style.display = "flex";
+    document.querySelector(".conn").style.display = "none";
+    document.querySelector(".initchat").style.display = "none";
+
     //files.classList.toggle("ativo");
   } );
     ho.addEventListener("click", () => {
@@ -999,6 +1187,13 @@ sparkles.style.color = "#6D6D6D";
     redf.style.display = "inline"
 sparkles.name = "sparkles-outline";
 sparkles.style.color = "#6D6D6D";
+chati.name = "chatbubbles-outline";
+    j5.style.color = "#6D6D6D";
+    chati.style.color = "#6D6D6D";
+document.querySelector(".lines").style.display = "flex";
+    document.querySelector(".conn").style.display = "none";
+    document.querySelector(".initchat").style.display = "none";
+
     //files.classList.toggle("ativo");
   });
       game.addEventListener("click", () => {
@@ -1024,6 +1219,13 @@ sparkles.style.color = "#6D6D6D";
     redf.style.display = "inline";
     sparkles.name = "sparkles-outline";
     sparkles.style.color = "#6D6D6D";
+    chati.name = "chatbubbles-outline";
+    chati.style.color = "#6D6D6D";
+    j5.style.color = "#6D6D6D";
+    document.querySelector(".lines").style.display = "flex";
+    document.querySelector(".conn").style.display = "none";
+    document.querySelector(".initchat").style.display = "none";
+
 
     });
   xc.addEventListener("click", () => {
@@ -1048,13 +1250,56 @@ j3.style.color = "#6D6D6D";
 j1.style.color = "#6D6D6D";
 leas.style.color = "#6D6D6D";
 removc.style.display = "none";
+    redf.style.display = "none";
+    chati.name = "chatbubbles-outline";
+    chati.style.color = "#6D6D6D";
+    j5.style.color = "#6D6D6D";
+    document.querySelector(".initchat").style.display = "none";
+
+   
+//files.classList.toggle("ativo");
+});
+
+  chat.addEventListener("click", () => {
+    document.querySelector(".initchat").style.display = "inline";
+    document.querySelector(".lines").style.display = "none";
+    document.querySelector(".conn").style.display = "inline";
+  seri.style.display = "none";
+  chati.style.color = "#fff";
+  chati.name = "chatbubbles";
+  j5.style.color = "#fff";
+  sparkles.name = "sparkles-outline";
+  sparkles.style.color = "#6D6D6D";
+  j4.style.color = "#6D6D6D";
+  gale.style.color = "#6D6D6D";
+git.style.display = "block";
+ho.style.color = "#6D6D6D";
+game.style.color = "#6D6D6D";
+files.style.display = "none";
+hclick.style.display = "none";
+games.style.display = "none";
+contro.name = "game-controller-outline";
+contro.style.color = "#6D6D6D";
+j2.style.color = "#6D6D6D";
+leaf.name = "leaf-outline";
+leaf.style.color = "#6D6D6D";
+leas.name = "library-outline";
+j3.style.color = "#6D6D6D";
+j1.style.color = "#6D6D6D";
+leas.style.color = "#6D6D6D";
+removc.style.display = "flex";
     redf.style.display = "none"
 //files.classList.toggle("ativo");
 });
 
+
 document.querySelector(".perfs").addEventListener("click", () => {
+  document.querySelector(".initchat").style.display = "none";
   seri.style.display = "inline";
+  j5.style.color = "#6D6D6D";
 sparkles.name = "sparkles";
+chati.name = "chatbubbles-outline";
+    chati.style.color = "#6D6D6D";
 sparkles.style.color = "#fff";
 j4.style.color = "#fff";
 gale.style.color = "#6D6D6D";
