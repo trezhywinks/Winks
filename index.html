@@ -58,14 +58,13 @@
   display: none;
 }
   
-  .top, .rectop{
+  .top{
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 56px;
   background: #101010;
-  border-bottom: 1px solid #6D6D6D5E;
   
   min-height: calc(56px + env(safe-area-inset-top));
   padding-top: env(safe-area-inset-top);
@@ -73,9 +72,9 @@
   display: flex;
   align-items:center;
   justify-content: space-between;
+  transition: 0.5s;
   z-index: 10;
 }
-
 
 .top::before {
   content: "";
@@ -90,6 +89,12 @@
   
   z-index: -1;
 }
+
+.top.ativo{
+  top: -840px;
+  transition: 0.8s;
+}
+
    
   .as{
    display: flex;
@@ -383,10 +388,14 @@ font-size: 14px !important;
       display: flex;
       margin-right: 10px;
       justify-content: space-between;
-      width: 80px;
+      width: 120px;
     }
-    .nefs{
+    .nefs {
       margin-top: 10px;
+    }
+    
+    .buscar-user{
+      margin-top: 7px;
     }
 </style>
 <body>
@@ -402,6 +411,9 @@ font-size: 14px !important;
 </div>
 
    <div class="qik">
+     <div class="buscar-user">
+       <ion-icon style="color: #6D6D6D; font-size: 25px;"  name="search-circle-outline"></ion-icon>
+     </div>
      <div class="nefs">
       <ion-icon style="color: #6D6D6D; font-size: 20px;" name="newspaper-outline"></ion-icon> 
      </div>
@@ -489,25 +501,6 @@ font-size: 14px !important;
         <img src="https://raw.githubusercontent.com/trezhywinks/cripwinks/refs/heads/main/IMG_4354.jpeg" class="" />
       </div>
     </div>
-               <center>
-                 <div class="git">
-             <div class="o">
-               <img src="https://raw.githubusercontent.com/trezhywinks/API-Makima/main/IMG_4969.jpeg" width="120" height="120" style="border-radius: 100%; border: 5px solid #121212;" />
-              <!-- https://raw.githubusercontent.com/trezhywinks/API-Makima/main/IMG_4998.jpeg-->
-             </div>
-             <div class="e">
-               <h2>trezhywinks</h2>
-               <div class="as">
-                <div class="log">
-                </div>
-                <div class="names" style="margin-left: 2px;">
-                 <p>Phäntom</p> 
-                </div>
-               </div>
-             </div>
-          </div>
-   
-  </center>
                </div>
                </div>
     <div class="god" style="width:100%; margin: 0 auto 10px;">
@@ -532,7 +525,7 @@ font-size: 14px !important;
         </div>
          <div class="games" id="xc">
            <ion-icon class="sparkles" name="sparkles-outline" style="font-size: 25px;"></ion-icon>
-   <p id="creat" class="j4" style="font-size: 14px;">Winks</p>
+   <p id="creat" class="j4" style="font-size: 14px;">Você</p>
  </div>
       </div>
     </div>
@@ -565,7 +558,7 @@ display: none;
         .banner{
           position: ; top: 0;
           left: 0; right: 0;
-          background-image: url("https://raw.githubusercontent.com/trezhywinks/Winks/refs/heads/main/IMG_5024.png");
+          background-image: url("./1DB25C7F-91CE-4B2E-AE18-28724BB55A80.gif");
           background-position: center center;
           background-size: cover;
           background-repeat: no-repeat;
@@ -623,7 +616,9 @@ display: none;
           overflow-y: auto;
           left: 450px;
           background: #101010;
+          display: none;
           transition: 0.3s;
+          
         }
         
         .suport.ativo{
@@ -633,23 +628,28 @@ display: none;
           height: 100vh;
           transition: 0.3s;
           z-index: 99999;
+          display: block;
           overflow-y: auto;
         }
+        .trqwe{
+        }
         
+        .banner-suport{
+          background-image: url("./1DB25C7F-91CE-4B2E-AE18-28724BB55A80.gif");
+          width: 100%;
+         height: 140px;
+         background-position: center center;
+         background-size: cover;
+         background-repeat: no-repeat;
+         box-shadow: inset 0 -10px 20px #101010;
+        }
       </style>
      <div class="logo">
        <div class="banner">
-                  <div class="ipo" style="margin-top: 35%;">
-            <div class="iponi">
-            <ion-icon style="font-size:17px; color: #6D6D6D;" name="ribbon-outline"></ion-icon>
-            </div>
-             <div class="snixx">
-               <p>verificado</p>
-             </div> 
-          </div>
        </div>
-       <div class="perfect" style="position: relative; margin-top: -25px;">
-       <img src="https://raw.githubusercontent.com/trezhywinks/Winks/refs/heads/main/IMG_4994.jpeg" width="90" height="90"/>
+       <div class="perfect" style="position: relative;margin-top: -25px;  background: #101010; border-top-left-radius: 35px; border-top-right-radius: 35px;">
+      <div class="trqwe">
+     <img src="https://raw.githubusercontent.com/trezhywinks/Winks/refs/heads/main/IMG_4994.jpeg" style="margin-top: -40px; border: 5px solid #101010;" width="90" height="90"/>
        <br>
        <h3>trezhywinks</h3>
        <div class="cute" style="display: flex; width: 80%; margin: 10px auto 10px; justify-content: space-around;">
@@ -686,12 +686,13 @@ display: none;
                <p id="ds">46</p>
              </div> 
           </div>
-
+      </div>
        </div>
        <div class="recado" style="width: 80%; margin: 0 auto 10px;">
         <p>Perfil de creador, soy uno de los creadores del sitio winks</p> 
        </div>
        </div>
+       
      </div>
     </div>
     <div class="initchat">
@@ -717,11 +718,11 @@ display: none;
     </div>
     
     <div class="suport">
-        
       <br>
       <br>
-      <br>
-      <br>
+      <div class="banner-suport">
+        <!--img src="./1DB25C7F-91CE-4B2E-AE18-28724BB55A80.gif" width="100%"/-->
+      </div>
       <div class="pint">
       <div class="convers" style="display: flex; padding: 10px;">
       <div class="clow">
@@ -733,7 +734,7 @@ display: none;
       </div>
       </div>
       <div class="sedqa">
-       <box-icon style="fill:#fff;" name='subdirectory-right'></box-icon> 
+        <h2 style="color: #6D6D6D;">└</h2>
       </div>
       <div class="shows">
       <div class="balions">
@@ -776,6 +777,7 @@ display: none;
       document.querySelector(".top").style.display = "flex";
       document.querySelector(".flexd").style.display = "flex";
       document.querySelector(".recbottom").style.display = "none";
+      document.querySelector(".top").classList.toggle("ativo");
     } );
     
       document.querySelector(".sertrezhy").addEventListener("click", () =>{
@@ -783,9 +785,10 @@ display: none;
       document.querySelector(".rectop").classList.toggle("ativo");
       document.querySelector(".initchat").classList.toggle("ativo");
       document.querySelector(".suport").classList.toggle("ativo");
-      document.querySelector(".top").style.display = "none";
+     // document.querySelector(".top").style.display = "none";
       document.querySelector(".flexd").style.display = "none";
       document.querySelector(".recbottom").style.display = "inline";
+      document.querySelector(".top").classList.toggle("ativo");
      
       } );
     </script>
@@ -1115,7 +1118,6 @@ fetch("https://raw.githubusercontent.com/trezhywinks/API-Makima/refs/heads/main/
   const chat = document.getElementById("chat");
   const chati = document.querySelector(".chat");
   const files = document.querySelector(".files");
-  const git = document.querySelector(".git");
   const games = document.querySelector(".gamesd");
   const hclick = document.querySelector(".homeclick");
   const contro = document.querySelector(".contro");
@@ -1133,7 +1135,7 @@ const xc = document.getElementById("xc");
   
   gale.addEventListener("click", () =>{
     gale.style.color = "#fff";
-    git.style.display = "none";
+   // git.style.display = "none";
     ho.style.color = "#6D6D6D";
     game.style.color = "#6D6D6D";
     files.style.display = "inline";
@@ -1166,7 +1168,6 @@ document.querySelector(".lines").style.display = "flex";
   } );
     ho.addEventListener("click", () => {
     gale.style.color = "#6D6D6D";
-    git.style.display = "block";
     ho.style.color = "#fff";
     game.style.color = "#6D6D6D";
     files.style.display = "none";
@@ -1199,7 +1200,6 @@ document.querySelector(".lines").style.display = "flex";
       game.addEventListener("click", () => {
       gale.style.color = "#6D6D6D";
       ho.style.color = "#6D6D6D";
-      git.style.display = "none";
       game.style.color = "#fff";
       files.style.display = "none";
       hclick.style.display = "none";
@@ -1234,7 +1234,6 @@ document.querySelector(".lines").style.display = "flex";
   sparkles.style.color = "#fff";
   j4.style.color = "#fff";
   gale.style.color = "#6D6D6D";
-git.style.display = "block";
 ho.style.color = "#6D6D6D";
 game.style.color = "#6D6D6D";
 files.style.display = "none";
@@ -1255,9 +1254,6 @@ removc.style.display = "none";
     chati.style.color = "#6D6D6D";
     j5.style.color = "#6D6D6D";
     document.querySelector(".initchat").style.display = "none";
-
-   
-//files.classList.toggle("ativo");
 });
 
   chat.addEventListener("click", () => {
@@ -1272,7 +1268,6 @@ removc.style.display = "none";
   sparkles.style.color = "#6D6D6D";
   j4.style.color = "#6D6D6D";
   gale.style.color = "#6D6D6D";
-git.style.display = "block";
 ho.style.color = "#6D6D6D";
 game.style.color = "#6D6D6D";
 files.style.display = "none";
@@ -1289,7 +1284,6 @@ j1.style.color = "#6D6D6D";
 leas.style.color = "#6D6D6D";
 removc.style.display = "flex";
     redf.style.display = "none"
-//files.classList.toggle("ativo");
 });
 
 
@@ -1303,7 +1297,6 @@ chati.name = "chatbubbles-outline";
 sparkles.style.color = "#fff";
 j4.style.color = "#fff";
 gale.style.color = "#6D6D6D";
-git.style.display = "block";
 ho.style.color = "#6D6D6D";
 game.style.color = "#6D6D6D";
 files.style.display = "none";
